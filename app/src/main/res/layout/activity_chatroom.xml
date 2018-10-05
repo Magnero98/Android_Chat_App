@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#455A64"
+    tools:context="com.example.linyansen.udacity.ChatroomActivity">
+
+    <TextView android:id="@+id/nameTextView"
+        android:background="#37BDB5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:text="MedicaBot"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"/>
+
+    <ScrollView android:id="@+id/chatroomScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingTop="10dp">
+
+        <LinearLayout android:id="@+id/chatLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="10dp">
+<!--
+            <TextView android:id="@+id/query"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"/>
+-->
+            <RelativeLayout
+                android:background="@drawable/layout_radius"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right">
+
+                <TextView
+                    android:maxWidth="300dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="hello"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp"/>
+
+            </RelativeLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <RelativeLayout
+                android:background="@drawable/layout_radius"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:backgroundTint="#AAE9FF">
+
+                <TextView
+                    android:maxWidth="300dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Hi There!"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp"/>
+
+            </RelativeLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <RelativeLayout
+                android:background="@drawable/layout_radius"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:backgroundTint="@android:color/white">
+
+                <TextView
+                    android:maxWidth="300dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="I'm John Doe, nice tomeet You!"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp"/>
+
+            </RelativeLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <RelativeLayout
+                android:background="@drawable/layout_radius"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:backgroundTint="#AAE9FF">
+
+                <TextView
+                    android:maxWidth="300dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Ohh Hi John Doe! pleased to meet you."
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp"/>
+
+            </RelativeLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="3dp" />
+
+            <RelativeLayout
+                android:background="@drawable/layout_radius"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:backgroundTint="#AAE9FF">
+
+                <TextView
+                    android:maxWidth="300dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="I'm MedicaBot, try to ask me something! hope you like me :)"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout android:background="#263238"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/sticker"/>
+
+        <EditText
+            android:id="@+id/textMessageEditText"
+            android:layout_width="278dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/button_radius"
+            android:hint="Your Message Here..."
+            android:padding="10dp"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"/>
+        
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/send"
+            android:onClick="sendChat"/>
+    </LinearLayout>
+</LinearLayout>
